@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tinyrender</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+            @import url('https://fonts.googleapis.com/css?family=Source+Sans+3');
+
+            body {
+                font-family: 'Source Sans 3', sans-serif;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Libre Baskerville', serif;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+
+            .nav {
+                flex-basis: 10em;
+            }
+
+            .contents {
+                flex-grow: 1;
+                max-width: 600px;
+            }
+
+            .hide-desktop {
+                display: none;
+            }
+
+            @media (max-width: 800px) {
+                .container {
+                    flex-wrap: wrap;
+                }
+                .hide-desktop {
+                    display: contents;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>tinyrender</h1>
+        <hr>
+        <div class="container">
+            <div class="nav">
+                <ul>
+                    <li>Home</li>
+                    <li>Install</li>
+                    <li>Usage</li>
+                </ul>
+            </div>
+            <div class="contents">
+                <div class="hide-desktop"><hr></div>
+
+                <h3>Home</h3>
+                A minimalist graphics engine written in C++17. Supports geometric shapes, OBJ files, basic lighting as well as specific support for voxels and wave simulation. 
+
+                Tinyrender targets WebGPU and supports Desktop (MacOS/Windows/Linux) as well as the browser through WASM (<a href="">try it below »</a>)
+            </div>
+        </div>
+    </body>
+</html>
