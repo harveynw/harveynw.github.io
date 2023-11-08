@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+3');
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.nav {
+    flex-basis: 10em;
+}
+
+.nav > ul > li > a:link, a:visited {
+    color: black;
+}
+
+.contents {
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.code-block {
+    background-color: #fcf0e1;
+    border-radius: 4px;
+    white-space: pre;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .hide-desktop {
+        display: contents;
+    }
+}
+

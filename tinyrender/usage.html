@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tinyrender</title>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+    </head>
+    <body>
+        <h1>tinyrender</h1>
+        <hr>
+        <div class="container">
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Usage</li>
+                    <li><a href="install.html">Install</a></li>
+                </ul>
+            </div>
+            <div class="contents">
+                <div class="hide-desktop"><hr></div>
+
+                <h3>Usage</h3>
+
+                <h4>Minimal example</h4>
+                Include the necessary header files, initialise tinyrender and start the event loop.
+
+                <pre><code class="code language-cpp">code/usage_minimal.cpp</code></pre>
+                <br>
+                <h4>Adding Objects</h4>
+                Objects can be added to the scene by the engine interface:
+
+                <pre><code class="code language-cpp">code/usage_add_object.cpp</code></pre>
+
+                Current options are:
+
+                <pre><code class="code language-cpp">code/usage_object_examples.cpp</code></pre>
+
+                <br>
+                <h4>Add Color/Textures</h4>
+                Altering the appearance of objects, respecting UV data if applying to an .obj file, is straightforward:
+
+                <pre><code class="code language-cpp">code/usage_object_appearance.cpp</code></pre>
+
+                Objects can also be hidden, i.e. skipped during the render pass:
+
+                <pre><code class="code language-cpp">code/usage_object_hide.cpp</code></pre>
+
+                <br>
+                <h4>Building for web</h4>
+                tinyrender is ready to be built using the emscripten SDK, but this will require modifying your event loop to be non-blocking:
+
+                <pre><code class="code language-cpp">code/usage_emscripten.cpp</code></pre>
+            </div>
+        </div>
+        <script src="scripts/code.js"></script>
+    </body>
+</html>
