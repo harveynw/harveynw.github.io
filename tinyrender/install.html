@@ -8,7 +8,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cmake.min.js"></script>
-        <script>hljs.highlightAll();</script>
     </head>
     <body>
         <h1>tinyrender</h1>
@@ -25,14 +24,12 @@
                 <div class="hide-desktop"><hr></div>
 
                 <h3>Install</h3>
-                tinyrender is configured as a CMake project and should build with minimal configuration.
-
-                <pre><code class="code language-bash">code/install_build.sh</code></pre>
-                
-                Then link with your executable:
-
-                <pre><code class="language-cmake">TODO</code>
-                </pre>
+                tinyrender is configured as a CMake project. You can either download the <a href="https://github.com/harveynw/tinyrender">github repository</a>, place it in your own project's root directory, and then:
+                <pre><code class="code language-cmake">code/install_add_subdirectory.cmake</code></pre>
+                Or even simpler, use <i>FetchContent</i>:
+                <pre><code class="code language-cmake">code/install_fetch_content.cmake</code></pre>
+                Finally, link tinyrender with your target:
+                <pre><code class="code language-cmake">code/install_cmake.cmake</code></pre>
             </div>
         </div>
         <script src="scripts/code.js"></script>
